@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary : #646cff;
+    --color-rubik-red: #ff0000;
+  --color-rubik-blue: #0046ff;
+  --color-rubik-green: #00a651;
+  --color-rubik-yellow: #ffd500;
+  --color-rubik-orange: #ff7a00;
+  --color-rubik-white: #ffffff;
+}
+
+@utility bg-rubiks-blur {
+  background-image:
+    radial-gradient(circle at 20% 20%, var(--color-rubik-red) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, var(--color-rubik-blue) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, var(--color-rubik-green) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, var(--color-rubik-yellow) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, var(--color-rubik-orange) 0%, transparent 45%),
+    radial-gradient(circle at 50% 10%, var(--color-rubik-white) 0%, transparent 35%);
+}
+
+@utility bg-rubiks-blur_dark {
+  background-color: #0e0f12;
+
+  background-image:
+
+    radial-gradient(circle at 50% 40%, rgba(255,255,255,0.06) 0%, transparent 60%),
+
+    /* primary accent glows */
+    radial-gradient(circle at 15% 25%, var(--color-rubik-red) 0%, transparent 35%),
+    radial-gradient(circle at 85% 30%, var(--color-rubik-blue) 0%, transparent 35%),
+    radial-gradient(circle at 25% 85%, var(--color-rubik-green) 0%, transparent 35%),
+
+    /* secondary accents (subtle) */
+    radial-gradient(circle at 75% 80%, var(--color-rubik-yellow) 0%, transparent 30%),
+    radial-gradient(circle at 60% 10%, var(--color-rubik-orange) 0%, transparent 30%);
+    
+  background-blend-mode: screen;
+}
+
+
+@utility bg-rubiks-blur-light {
+  background-color: #ffffff;
+
+  background-image:
+    /* soft central light wash */
+    radial-gradient(1200px circle at 50% 35%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 40%, transparent 75%),
+
+    /* subtle color atmosphere */
+    radial-gradient(900px circle at 15% 20%, rgba(255, 0, 0, 0.18), transparent 70%),
+    radial-gradient(900px circle at 85% 25%, rgba(0, 70, 255, 0.18), transparent 70%),
+    radial-gradient(900px circle at 25% 85%, rgba(0, 166, 81, 0.18), transparent 70%),
+    radial-gradient(900px circle at 80% 80%, rgba(255, 122, 0, 0.15), transparent 70%),
+    radial-gradient(900px circle at 50% 95%, rgba(255, 213, 0, 0.15), transparent 70%);
+
+  background-blend-mode: normal;
+}
+
+
